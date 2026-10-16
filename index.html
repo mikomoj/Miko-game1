@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <title>My Minecraft Game — Download</title>
+  <style>
+    :root { color-scheme: dark; --bg:#101820; --panel:#182630; --green:#57e389; --muted:#b8c8ce; }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; min-height:100vh; display:grid; place-items:center; padding:24px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:#f4fbff;
+      background: radial-gradient(circle at 15% 15%, #254b3c 0, transparent 35%),
+                  radial-gradient(circle at 85% 80%, #283b61 0, transparent 32%), var(--bg);
+    }
+    .card {
+      width:min(680px,100%); text-align:center; padding:clamp(26px,6vw,54px);
+      background:linear-gradient(145deg,rgba(28,47,58,.96),rgba(18,31,40,.96));
+      border:1px solid rgba(255,255,255,.13); border-radius:28px;
+      box-shadow:0 24px 80px #0007;
+    }
+    .cube { font-size:64px; line-height:1; margin-bottom:20px; filter:drop-shadow(0 8px 16px #0006); }
+    .tag { display:inline-block; padding:7px 12px; border-radius:999px; color:var(--green); background:#57e38918; border:1px solid #57e38955; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { font-size:clamp(30px,6vw,48px); margin:18px 0 12px; letter-spacing:-.04em; }
+    p { color:var(--muted); line-height:1.7; margin:0 auto; max-width:480px; }
+    .file { display:flex; align-items:center; gap:14px; text-align:left; margin:28px 0 22px; padding:16px; border-radius:16px; background:#0c171d80; border:1px solid #ffffff16; }
+    .file-icon { font-size:30px; }
+    .file strong { display:block; overflow-wrap:anywhere; }
+    .file small { display:block; margin-top:5px; color:var(--muted); }
+    .download {
+      display:inline-flex; justify-content:center; align-items:center; gap:10px; width:100%;
+      padding:16px 22px; border-radius:14px; text-decoration:none; font-weight:800; font-size:17px;
+      color:#102017; background:var(--green); box-shadow:0 8px 24px #57e38930;
+      transition:transform .18s ease, filter .18s ease;
+    }
+    .download:hover { transform:translateY(-2px); filter:brightness(1.07); }
+    .download:focus-visible { outline:3px solid white; outline-offset:4px; }
+    .note { font-size:12px; margin-top:18px; }
+    footer { margin-top:28px; font-size:12px; color:#8da2ab; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="cube" aria-hidden="true">🟩🟫</div>
+    <span class="tag">Game download</span>
+    <h1>My Minecraft Game</h1>
+    <p>Your game files are ready. Click the button below to download the EXE file and run it on your device.</p>
+    <div class="file">
+      <div class="file-icon" aria-hidden="true">🎮</div> <!-- Icon change kiya application ke liye -->
+      <div>
+        <strong>MyMinecraftGame.exe</strong>
+        <small>Windows Application · Game files</small>
+      </div>
+    </div>
+    <!-- Yahan badlaav kiya gaya hai -->
+    <a class="download" href="./MyMinecraftGame.exe" download="MyMinecraftGame.exe">
+      <span aria-hidden="true">⬇</span> Download Game
+    </a>
+    <p class="note">Tip: Keep this HTML file and the EXE file in the same folder when you upload the page to a website.</p>
+    <footer>Made for your Minecraft game ✦</footer>
+  </main>
+</body>
+</html>
